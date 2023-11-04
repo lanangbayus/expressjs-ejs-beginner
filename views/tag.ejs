@@ -1,0 +1,16 @@
+<%- include("part/header.ejs") %> <%- include("part/navbar.ejs") %>
+
+<h1><%= data.title %></h1>
+<% if(data.img) { %>
+<img src="<%= data.img %>" />
+<% } %>
+<div>
+  <p>You are now in <%= data.description %> page.</p>
+  <small>Followers: <%= data.followers %></small>
+</div>
+<hr />
+<% for (let post of data.posts) { %>
+<p>
+  <a href="#"><%= post.title %> by <%= post.author %></a>
+</p>
+<% } %> <%- include("part/footer.ejs") %>

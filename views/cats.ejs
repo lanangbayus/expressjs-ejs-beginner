@@ -1,0 +1,8 @@
+<%- include("part/header.ejs") %> <%- include("part/navbar.ejs") %>
+<h1>Cats</h1>
+<ul>
+  <% for (const cat of cats) { %>
+  <li><%= cat %></li>
+  <% } %>
+</ul>
+<%- include("part/footer.ejs") %>
